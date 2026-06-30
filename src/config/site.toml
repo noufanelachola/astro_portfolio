@@ -1,10 +1,10 @@
 [config.site]
-title = "navfolio"
-description = "A personal navigation portfolio starter built with Astro."
-pageTitle = "navfolio | Digital Publication Space"
-pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
-repository = "https://github.com/dodolalorc/astro-navfolio"
-footerNote = "Released as an open-source starter."
+title = "Noufan Elachola"
+description = "Personal website of Noufan Elachola, a Computer Science Engineering student documenting projects, blogs, and research in OT/ICS Cybersecurity, Industrial Automation, Malware Analysis, AI, and Critical Infrastructure Security."
+pageTitle = "Noufan Elachola | OT & ICS Cybersecurity"
+pageDescription = "Welcome to my personal website where I share projects, technical blogs, research notes, and my journey into Operational Technology (OT) and Industrial Control Systems (ICS) Cybersecurity."
+repository = "https://github.com/noufanelachola"
+footerNote = "Built with Astro. Designed and maintained by Noufan Elachola"
 
 [config.vibe]
 showTrail = true
@@ -12,7 +12,7 @@ showTrail = true
 [config.theme]
 # Available palettes:
 # green-soft, green-vivid, rose-soft, pink-soft, purple-soft, blue-soft, orange-soft, brown-soft
-palette = "green-soft"
+palette = "blue-soft"
 
 [config.code]
 lightTheme = "catppuccin-latte"
@@ -33,7 +33,7 @@ show_on_posts = true
 [config.search]
 enabled = true
 shortcut = "mod+k"
-placeholder = "Search notes..."
+placeholder = "Search articles, projects, and notes..."
 maxResults = 6
 
 [config.blog]
@@ -68,51 +68,52 @@ pageview = true
 comment = true
 
 [config.profile]
-name = "navfolio"
-handle = "@navfolio"
-role = "A Cat Developer"
-company = "Independent Studio"
-location = "Remote"
-email = "hello@navfolio.site"
-website = "https://astro.navfolio.site/"
-github = "https://github.com/dodolalorc/astro-navfolio"
-meta = "Open-source maintainer"
-avatar = "/images/logo.png"
+name = "Noufan Elachola"
+handle = "@noufanelachola"
+role = "Engineer"
+company = "OT & ICS Security Engineer"
+location = "Kerala, India"
+email = "noufansadiqelachola@gmail.com"
+website = "https://noufanelachola.com"
+github = "https://github.com/noufanelachola"
+meta = "Documenting my journey in OT, ICS, Industrial Automation, Malware Analysis, and AI"
+avatar = "/images/Noufan Elachola.png"
 
 [[config.topNav.links]]
 label = "Home"
 href = "/"
 
 [[config.topNav.links]]
-label = "Blog"
-href = "/blog"
+label = "About"
+href = "/about"
 
 [[config.topNav.links]]
 label = "Projects"
 href = "/projects"
 
 [[config.topNav.links]]
+label = "Blog"
+href = "/blog"
+
+[[config.topNav.links]]
 label = "Vibe"
 href = "/vibe"
 
-[[config.topNav.links]]
-label = "About"
-href = "/about"
 
 [config.home]
 layout = "grid"
 
 [config.home.quote]
 text = [
-  "Navigate your world,",
-  "Showcase your story,",
-  "and keep everything in one place.",
+  "Learning continuously,",
+  "building practical solutions,",
+  "and securing critical infrastructure.",
 ]
-image = "/images/logo-with-name.png"
+image = "/images/Noufan Elachola.png"
 
 [config.home.intro]
-title = "here is navfolio"
-name = "navfolio"
+title = "I'm"
+name = " Noufan Elachola"
 body = [
   "The name combines \"Navigation\" and \"Portfolio\".",
   "Navfolio prioritizes lightweight organization, seamless reading, and developer-friendly aesthetics.",
@@ -147,22 +148,22 @@ href = "/blog"
 icon = "briefcase"
 title = "Resume"
 subtitle = "Career profile and experience"
-href = "https://github.com/dodolalorc/navfolio"
+href = "https://github.com/noufanelachola"
 
 [[config.home.navigation]]
 icon = "github"
 title = "Open Source"
 subtitle = "Code, experiments, and tools"
-href = "https://github.com/dodolalorc/astro-navfolio"
+href = "https://github.com/noufanelachola"
 
 [[config.home.connect]]
 label = "GitHub"
-href = "https://github.com/dodolalorc/astro-navfolio"
+href = "https://github.com/noufanelachola"
 icon = "github"
 
 [[config.home.connect]]
 label = "Website"
-href = "https://astro.navfolio.site/"
+href = "https://noufanelachola.com"
 icon = "compass"
 
 [[config.home.connect]]
@@ -177,7 +178,7 @@ icon = "repo"
 
 [[config.home.connect]]
 label = "Email"
-href = "mailto:hello@navfolio.site"
+href = "mailto:noufansadiqelachola@gmail.com"
 icon = "mail"
 
 [[config.home.doing]]
