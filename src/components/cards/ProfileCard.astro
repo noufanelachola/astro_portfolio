@@ -30,7 +30,10 @@ const { profile } = Astro.props as { profile: Profile };
   <div class="profile-heading">
     <h1>{profile.name}</h1>
     <p>{profile.handle}</p>
-    <span><Icon name="sparkle" /> {profile.role}</span>
+    <div class="profile-icon-div">
+      <span><Icon name="sparkle" /><p>{profile.role}</p></span>
+      <span><Icon name="map" /><p>{profile.location}</p></span>
+    </div>
   </div>
 </article>
 
@@ -71,16 +74,25 @@ const { profile } = Astro.props as { profile: Profile };
   }
 
   .profile-heading p {
-    margin: 4px 0 14px;
+    /* margin: 4px 0 14px; */
+    margin: 0px 0px 2px 0px;
     color: var(--paper-ink-soft);
     font-size: 0.94rem;
   }
 
-  .profile-heading span {
-    display: inline-flex;
+  .profile-heading .profile-icon-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .profile-heading .profile-icon-div span {
+    /* display: inline-flex; */
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
     justify-content: flex-end;
+    gap: 4px;
     padding: 0;
     border: 0;
     border-radius: 0;
@@ -89,9 +101,15 @@ const { profile } = Astro.props as { profile: Profile };
     font-size: 0.82rem;
   }
 
+  .profile-heading .profile-icon-div span p{
+    margin: 0;
+    color: var(--paper-ink);
+    font-size: 0.82rem;
+  }
+
   .profile-heading svg {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     flex: 0 0 auto;
     color: var(--paper-accent);
   }
@@ -109,7 +127,10 @@ const { profile } = Astro.props as { profile: Profile };
       margin-left: auto;
     }
 
-    .profile-heading span {
+    .profile-heading .profile-icon-div span {
+      justify-content: center;
+    }
+    .profile-heading .profile-icon-div span p {
       justify-content: center;
     }
   }

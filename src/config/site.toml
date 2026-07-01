@@ -105,7 +105,7 @@ layout = "grid"
 
 [config.home.quote]
 text = [
-  "Securing Critical Infrastructure.",
+  "Securing Critical Infrastructure through Cybersecurity and AI",
 ]
 image = "/images/pht (1).jpg"
 
@@ -113,7 +113,7 @@ image = "/images/pht (1).jpg"
 title = "I'm"
 name = " Noufan Elachola"
 body = [
-  "I'm a final-year Computer Science Engineering student with an interest in OT/ICS cybersecurity.",
+  "I'm a final-year Computer Science Engineering student from Kerala, India, aiming a career in Operational Technology (OT) and Industrial Control Systems (ICS) cybersecurity.",
   "Most of my time goes into learning, experimenting, and understanding how industrial systems can be made more secure.",
   "This place is where I document my projects, technical blogs, and the things I learn along the way."
 ]
@@ -177,21 +177,9 @@ href = "mailto:noufansadiqelachola@gmail.com"
 icon = "mail"
 
 [[config.home.doing]]
-text = "Shipping a personal dashboard template"
+text = "Learning malware analysis and assembly"
 mark = "01"
 
 [[config.home.doing]]
-text = "Writing reusable notes for future projects"
+text = "Exploring Malcolm for OT network monitoring"
 mark = "02"
-
-[[config.home.doing]]
-text = "Improving static-site publishing workflow"
-mark = "03"
-
-[[config.home.doing]]
-text = "Collecting useful developer resources"
-mark = "04"
-
-[[config.home.doing]]
-text = "Exploring small open-source ideas"
-mark = "05"

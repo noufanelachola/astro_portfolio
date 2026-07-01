@@ -3,6 +3,10 @@ import { getCollection } from 'astro:content';
 import Icon from '../Icon.astro';
 import { createRecentBlogHeatmap, type HeatmapDay } from '../../utils/blog-heatmap';
 
+import { getGithubContributions } from "../../utils/github";
+
+const githubData = await getGithubContributions();
+
 interface Props {
   weeks?: number;
   showLatest?: boolean;
@@ -20,8 +24,13 @@ const {
   dateArchiveBaseHref,
   startDate,
 } = Astro.props;
+
 const posts = await getCollection('blog', ({ data }) => !excludeDraft || !data.draft);
-const heatmap = createRecentBlogHeatmap(posts, weeks, latestCount, startDate);
+const heatmap = createRecentBlogHeatmap(posts, weeks, latestCount, startDate, githubData.recent);
+
+heatmap.githubContributions = githubData.totalContributions;
+heatmap.repositories = githubData.repositories;
+
 const heatmapLabel = startDate
   ? `Writing activity since ${heatmap.startDate}`
   : `Recent ${heatmap.weeks} weeks writing activity`;
@@ -56,16 +65,18 @@ function getDayHref(day: HeatmapDay) {
 <article class="glass-card heatmap-card">
   <div class="stats-row">
     <div class="stat-item">
-      <strong>{heatmap.totalPosts}</strong>
-      <span>Total posts</span>
+      <strong>{heatmap.githubContributions}</strong>
+      <span>GitHub Contributions</span>
     </div>
+
     <div class="stat-item">
-      <strong>{heatmap.activeDays}</strong>
-      <span>Active days</span>
+      <strong>{heatmap.blogPosts}</strong>
+      <span>Blog Posts</span>
     </div>
+
     <div class="stat-item">
-      <strong>{heatmap.currentStreak}</strong>
-      <span>Day streak</span>
+      <strong>{heatmap.repositories}</strong>
+      <span>Repositories</span>
     </div>
   </div>
 
@@ -162,6 +173,7 @@ function getDayHref(day: HeatmapDay) {
   }
 
   .stat-item strong {
+    display: inline-block;
     color: var(--paper-ink);
     font-size: 1.12rem;
     line-height: 1;
@@ -357,6 +369,7 @@ function getDayHref(day: HeatmapDay) {
       overflow: hidden;
     }
 
+
     .rhythm-grid {
       --cell-gap: 2.5px;
       grid-template-columns: 22px minmax(0, 1fr);
@@ -384,4 +397,21 @@ function getDayHref(day: HeatmapDay) {
       font-size: 0.58rem;
     }
   }
+
+  @media (max-width: 500px){
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .stat-item strong{
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+  }
+
 </style>

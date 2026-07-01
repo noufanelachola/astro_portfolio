@@ -18,6 +18,9 @@ export interface HeatmapWindow {
   days: HeatmapDay[];
   weeks: number;
   startDate: string;
+  githubContributions: number;
+  repositories: number;
+  blogPosts: number;
   totalPosts: number;
   activeDays: number;
   currentStreak: number;
@@ -105,6 +108,7 @@ export function createRecentBlogHeatmap(
   weeks = 12,
   latestCount = 1,
   startDate?: HeatmapStartDate,
+  github: { date: string; count: number }[] = [],
 ): HeatmapWindow {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -126,6 +130,9 @@ export function createRecentBlogHeatmap(
   }
 
   const postsByDate = getPostsByDate(posts);
+  const githubMap = new Map(
+    github.map((g) => [g.date, g.count])
+  );
   const days: HeatmapDay[] = [];
 
   for (let index = 0; index < safeWeeks * DAYS_IN_WEEK; index += 1) {
@@ -134,11 +141,12 @@ export function createRecentBlogHeatmap(
     const key = getDateKey(date);
     const isFuture = date > today;
     const dayPosts = isFuture ? [] : (postsByDate.get(key) ?? []);
+    const githubCount = githubMap.get(key) ?? 0;
 
     days.push({
       date: key,
-      count: dayPosts.length,
-      level: getLevel(dayPosts.length),
+      count: dayPosts.length + githubCount,
+      level: getLevel(Math.min(dayPosts.length + githubCount, 4)),
       posts: dayPosts,
       isFuture,
     });
@@ -157,7 +165,10 @@ export function createRecentBlogHeatmap(
     days,
     weeks: safeWeeks,
     startDate: getDateKey(start),
-    totalPosts: posts.length,
+    githubContributions: 0,
+    repositories: 0,
+    totalPosts: posts.length + github.reduce((sum, g) => sum + g.count, 0),
+    blogPosts: posts.length ,
     activeDays: days.filter((day) => day.count > 0).length,
     currentStreak,
     latestPosts: getLatestPosts(posts, latestCount),
