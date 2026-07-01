@@ -77,7 +77,7 @@ email = "noufansadiqelachola@gmail.com"
 website = "https://noufanelachola.com"
 github = "https://github.com/noufanelachola"
 meta = "Documenting my journey in OT, ICS, Industrial Automation, Malware Analysis, and AI"
-avatar = "/images/Noufan Elachola.png"
+avatar = "/images/pht (1).jpg"
 
 [[config.topNav.links]]
 label = "Home"
@@ -105,22 +105,17 @@ layout = "grid"
 
 [config.home.quote]
 text = [
-  "Learning continuously,",
-  "building practical solutions,",
-  "and securing critical infrastructure.",
+  "Securing Critical Infrastructure.",
 ]
-image = "/images/Noufan Elachola.png"
+image = "/images/pht (1).jpg"
 
 [config.home.intro]
 title = "I'm"
 name = " Noufan Elachola"
 body = [
-  "The name combines \"Navigation\" and \"Portfolio\".",
-  "Navfolio prioritizes lightweight organization, seamless reading, and developer-friendly aesthetics.",
-  "It’s less a resume than a personal OS for your ideas, projects, notes, and online presence.",
-  "这个名字融合了“导航”与“作品集”。",
-  "Navfolio 专注于轻量级组织、流畅的阅读体验，以及对开发者友好的美学设计。",
-  "它不像一份简历，更像是一个属于你自己的个人操作系统——承载想法、项目、笔记与网络足迹。",
+  "I'm a final-year Computer Science Engineering student with an interest in OT/ICS cybersecurity.",
+  "Most of my time goes into learning, experimenting, and understanding how industrial systems can be made more secure.",
+  "This place is where I document my projects, technical blogs, and the things I learn along the way."
 ]
 image = "/images/logo-cat.png"
 
