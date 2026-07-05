@@ -4,7 +4,7 @@ description = "Personal website of Noufan Elachola, a Computer Science Engineeri
 pageTitle = "Noufan Elachola | OT & ICS Cybersecurity"
 pageDescription = "Welcome to my personal website where I share projects, technical blogs, research notes, and my journey into Operational Technology (OT) and Industrial Control Systems (ICS) Cybersecurity."
 repository = "https://github.com/noufanelachola"
-footerNote = "Built with Astro. Designed and maintained by Noufan Elachola"
+footerNote = "Designed and maintained by Noufan Elachola"
 
 [config.vibe]
 showTrail = true
@@ -87,17 +87,17 @@ href = "/"
 label = "About"
 href = "/about"
 
-[[config.topNav.links]]
-label = "Projects"
-href = "/projects"
+#[[config.topNav.links]]
+#label = "Projects"
+#href = "/projects"
 
 [[config.topNav.links]]
 label = "Blog"
 href = "/blog"
 
-[[config.topNav.links]]
-label = "Vibe"
-href = "/vibe"
+#[[config.topNav.links]]
+#label = "Vibe"
+#href = "/vibe"
 
 
 [config.home]
@@ -131,19 +131,19 @@ dateArchiveBaseHref = ""
 icon = "compass"
 title = "Portfolio"
 subtitle = "Selected work and case studies"
-href = "https://astro.navfolio.site/"
+href = "https://noufanelachola.com"
 
 [[config.home.navigation]]
 icon = "pen"
 title = "Blog"
 subtitle = "Essays, notes, and field reports"
-href = "/blog"
+href = "/"
 
 [[config.home.navigation]]
 icon = "briefcase"
 title = "Resume"
 subtitle = "Career profile and experience"
-href = "https://github.com/noufanelachola"
+href = "/resume/Resume - Noufan Elachola.pdf"
 
 [[config.home.navigation]]
 icon = "github"

@@ -1,7 +1,7 @@
 ---
-title: '蓮池の月明かり'
-description: '夏の夜、蓮池のほとりをひとり歩く心のゆらぎを、日本語で静かに綴った散文。'
-date: '2026-05-18T00:00:00+08:00'
+title: 'How the IP model tells Networking'
+description: 'Learn how actual communication takes place in an internet'
+date: '2026-07-06T00:00:00+08:00'
 draft: true
 heroImage: '/src/assets/figure/lotus.png'
 showHeroImage: true
@@ -10,9 +10,9 @@ tags:
   - '日本語'
   - '月明かり'
 categories:
-  - 文学写作
+  - Computer
 series:
-  - 荷塘月色三语阅读
+  - Networking
 comments: true
 sidebar:
   enable: true
